@@ -1,0 +1,798 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 6500px;
+}
+/* 1.Header................................................................................................ */
+.header {
+  width:100%;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, .5);
+}
+.header .logo {
+  width:40%;
+  float: left;
+}
+.nav{
+  width:60%;
+  float: left;
+  text-align: right; 
+}
+.clear{
+  clear: both;
+}
+.header .container .header-content .nav > li{
+  list-style: none;
+  display: inline-block;
+}
+.header .container .header-content .nav > li > a{
+  color: orangered;
+  padding:12px;
+  display: block;
+  text-decoration: none;
+}
+.header .container .header-content .nav > li > a:after ,
+.header .container .header-content .nav  > li > a.active:after{
+  content:"";
+  width:0;
+  height:3px;
+  display: block;
+  background-color: blue;
+  margin-top: 2px;
+  transition: .5s;
+}
+.header .container .header-content .nav > li > a.active:after{
+width:100%;
+}
+.header .container .header-content .nav > li > a:hover:after{
+  width: 100%;
+}
+.ba{
+  position: relative;
+}
+.fa{
+  color: white;
+  display: block;
+  padding: 10px;
+}
+.f {
+  position: absolute;
+  width: 120px;
+  padding:5px;
+  background-color: blue;
+  text-align: center;
+  left:78%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  }
+  .ba:hover + .b{
+      visibility: visible;
+      opacity:1;}
+      /* 2. Home......................................................................................... */
+      .home {
+          height:100vh;
+          background-image:url(../images/WhatsApp\ Image\ 2022-03-02\ at\ 8.51.36\ AM\ \(1\).jpeg);
+          background-position: cover;
+          position: relative;
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7)
+    }
+    .hover-opacity{
+        transition:opacity .5;
+    }
+    .hover-opacity:hover{
+        opacity: .5;
+    }
+      .home-content{
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          width:65%;
+      }
+      .home-content .title1 {
+          color: white;
+          font-size: 55px;
+          text-transform: uppercase;
+      }
+      .p1 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          color: blanchedalmond;
+          letter-spacing: 1.5px;
+          line-height: 1.6px;
+      }
+      .home-content .btn1 {
+          min-width: 150px;
+          padding: 15px 0;
+          border-radius: 5px;
+          border: 0;
+          cursor: pointer;
+          font-size: 18px;
+      }
+      .home-content .btn2 {
+        min-width: 150px;
+        padding: 15px 0;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        font-size: 18px;
+    }
+      .btn1 {
+          margin-right: 10px;
+      }
+      .btn2{
+         background-color: blue;
+         color: cornsilk;
+      }
+      .btn1:hover{
+        background-color: grey;
+        transition: 0,5s ;
+      }
+      .btn2:hover{
+        background-color: rgb(47, 47, 119);
+        transition: 0,5s ;
+      }
+      /* 3.About......................................................................................... */
+      
+    .about-content{
+        text-align: center;
+        height: 80vh;
+        overflow: hidden;
+    }
+   .about-item {
+        width: 30%;
+        float: left;
+        text-align: center;
+        border:1px solid  rgb(177, 170, 170);
+        padding: 30px 15px;
+        margin: 0px   20px;
+    }
+    .about-item.mg{
+        margin: 0 5%;
+    }
+    .about-title{
+      text-align: center;
+      margin: 30px  0px;
+    }
+      .line{
+        width: 80px;
+        height: 5px;
+        background-color: blue;
+        margin: 10px   800px;
+      }
+    .icon{
+        color: rgb(21, 95, 138);
+        margin-bottom: 10px;
+    }
+    .about-item-title {
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        transition: color .5s;
+    }
+    .about-content p {
+        letter-spacing: 2px;
+        line-height: 22px;
+        margin-bottom: 15px;
+        color:gray;
+    }
+    .about-item-link {
+        color: rgb(25, 143, 179);
+        text-decoration: none;
+    }
+    .about-item:hover .about-item-title{
+      color: white;
+      transition: 1s
+    }
+    
+
+
+    /* 3 Portfolio....................................................................................... */
+.portfolio {
+  height: 100vh;
+  background-color: rgb(182, 174, 174);
+}
+.portfolio-content {
+  overflow: hidden;
+}
+.portfolio-img{
+  width: 30%;
+  float: left;
+  margin-bottom: 20px;
+  position: relative;
+  padding:20px;
+}
+.content-portfolio{
+  width: 90%;
+}
+.portfolio-imege {
+  margin: 0 5%;
+}
+.port-title2{
+  text-align: center;
+  font-size: 35px;
+  padding-top: 70px;
+}
+.portfolio-img .port-content{
+  position: absolute;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  width:100%;
+  height:100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition:opacity 1s;
+}
+.portfolio-img:hover .port-content{
+  opacity:1;
+  visibility: visible;
+}
+.port-content .port-info{
+  position: absolute;
+  left:50%;
+  top:50%;
+  width: 80%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+}
+.port-content .category {
+  color: rgb(11, 197, 230);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s ,opacity .5s;
+  transition-delay: 0;
+}
+.port-title3{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s ,opacity .5s;
+  transition-delay: .4s;
+}
+.port-content a  {
+  display: inline-block;
+  width:40px;
+  height: 40px;
+  background-color: rgb(59, 175, 190);
+  position: relative;
+  top:15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 1s ,opacity .5s;
+  transition-delay: .6s;
+}
+.portfolio-img:hover .port-title3,
+.portfolio-img:hover .port-content a,
+.portfolio-img:hover .port-content .category{
+ top:0;
+ opacity: 1;
+ visibility: visible;
+}
+.port-content a i{
+  line-height: 40px;
+}
+/* 4 Offer........................................................................................ */
+ .offer-section{
+  height: 100hv;
+ }
+ .offer-content {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.offer-item{
+    width:30%;
+    float: left;
+    margin-bottom: 60px;
+    border: 1px solid  rgb(179, 173, 173) ;
+    padding: 30px 15px 30px 70px;
+    position: relative;
+}
+.offer-item.mg{
+    margin: 0%  5%;
+}
+.offer-item .icon{
+    position: absolute;
+    left:15px;
+    top:26px;
+    color:rgb(36, 154, 201);
+}
+.offer-item-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: 1s;
+}
+.offer-item-desc {
+ text-transform: capitalize;
+ margin-bottom: 15px;
+ line-height: 1.6;
+ color: rgb(194, 186, 186);
+ }
+ .offer-item.ltr:hover .offer-item-title{
+     color: white;
+ }   
+/* Service.............................................................................................. */
+
+ .service {
+  background-color: rgb(235, 232, 232);
+  margin-top: 490px;
+}
+.service-item{
+  width:50%;
+  float:left;
+}
+.clear {
+  clear: both;
+}
+.service-item .header{
+  text-align:left;
+}
+.service-item .header .line{
+  margin: 0 0 45px 0;
+}
+.service-title{
+  font-size: 40px;
+  padding-left: 10px;
+}
+.line20{
+  width: 70px;
+  height: 5px;
+  background-color: blue;
+  margin: 10px   15px;
+
+}
+.p-service{
+  padding-right: 20px;
+  color:rgb(102, 93, 93);
+  line-height: 1.4;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.service-list {
+  list-style: none;
+}
+.service-list li i {
+  border: 1px solid rgb(20, 110, 151);
+  color: rgb(31, 121, 238);
+  padding: 3px;
+  border-radius: 50%;
+  width: 20px;
+  height:20px;
+}
+.service-list li{
+  margin-bottom: 13px;
+  color:rgb(196, 185, 185);
+  padding-top: 20px;
+}
+.service-ul{
+  list-style: none;
+  text-align: center;
+}
+.service-ul li{
+  width:10px;
+  height:10px;
+  display: inline-block;
+  background-color: gray;
+  margin: 10px 5px;
+  border-radius: 50%;
+}
+.service-ul li.active{
+  background-color:rgb(45, 190, 190);
+}
+.service-ul li:hover{
+  background-color:rgb(59, 135, 165);
+}
+/* 6 numbers........................................................................................ */
+.numbers {
+  position: relative;
+  background-image: url(../images/magazine-unlock-01-2.3.6732-_F76FD2E0750EED9E1C255711ABAAB0E4.jpg);
+  height:350px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.numbers-items{
+  overflow:hidden;
+  padding-top: 130px;
+}
+.number-item {
+  width: 25%;
+  float: left;
+  text-align:center;
+}
+.number-item .icon{
+  color:rgb(158, 201, 241);
+  margin-bottom: 15px;
+}
+.number-title{
+  font-weight: bold;
+  font-size: 30px;
+  color:white;
+}
+.number-text {
+  color: white;
+}
+/* 7 Pricing............................................................................................................................. */
+.pricing {
+  height: 100vh;
+  background-color: rgb(206, 194, 194);
+}
+.pricing-header{
+  overflow: hidden;
+}
+.pricing-item{
+  float: left;
+  width:25%;
+  padding:30px 15px;
+  border: 1px solid  rgb(163, 156, 156);
+  text-align: center;
+  margin: 0px  40px;
+  height: 440px;
+}
+.title-pricing {
+  text-transform: uppercase;
+  font-size: 17px;
+  color:rgb(173, 165, 165); 
+}
+.section-title{
+  text-align: center;
+  font-size: 40px;
+  padding: 20px  0px;
+}
+.line-div{
+  width: 80px;
+  height: 5px;
+  background-color: blue;
+  margin: 8px   830px;
+  margin-bottom: 20px;
+}
+.pricing-month{
+  width: 130px;
+  height: 130px;
+  padding:12px 0;
+  margin: 20px auto;
+  border: 2px solid rgb(19, 170, 230);
+  border-radius: 50%;
+}
+.doller{
+  font-size: 50px;
+}
+.month{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+.pricing-list{
+  list-style: none;
+}
+.purchase {
+  border: 2px solid  rgb(34, 107, 150);
+  margin: auto;
+  padding:4px;
+  background-color: none;
+  display: block;
+  width: 120px;
+  margin-top: 15px;
+  transition: color .5s;
+}
+.pricing-img{
+  margin: 0 5%;
+}
+.pricing-list li{
+  color:gray;
+  line-height: 1.8;
+}
+.pricing-item{
+  position: relative;
+}
+.pricing-item:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0 ;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transition: .5s;
+  opacity:.5;
+}
+.pricing-item:hover:after{
+  width: 100%;
+  height: 100%;
+}
+.pricing-item:hover .title-pricing{
+  color: rgb(71, 174, 206);
+}
+.pricing-item:hover .pricing-month{
+  color: rgb(18, 120, 128);
+  transition: 1s;
+}
+/* 8- Testimonial.....................................................................................*/
+.testimonial {
+  position: relative;
+  background-image: url(../images/magazine-unlock-01-2.3.6732-_F76FD2E0750EED9E1C255711ABAAB0E4.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 350px;
+}   
+.test-div{
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+.testimonial-item {
+  float: left;
+  width: 50%;
+  color: white;
+  padding-right: 20px;
+  padding-top: 55px;
+  margin-bottom: 110px;
+}
+.testimonial-test{
+ padding:90px 20px 10px 150px;
+ position:relative;
+ line-height: 1.4;
+ margin-bottom: 20px;
+}
+.testimonial-test img{
+ position: absolute;
+ top: 82px;
+ left: 65px;
+ border-radius: 50%;
+}
+.testimonial-p{
+ text-transform: capitalize;
+ line-height: 1.5;
+ margin-left: 76px;
+ font-size: 14px;
+}
+.testimonial-test span{
+ color: rgb(70, 111, 129);
+}
+/* 9 Team......................................................................................... */
+.team-content{
+  overflow: hidden;
+  padding-left: 70px;
+  height: 100hv;
+}
+.team-item{
+  display: block;
+  float: left;
+  width: 28%;
+  background-color:rgb(170, 172, 173);
+  padding: 17px 10px;
+  text-align: center;
+  position: relative;
+}
+.team-img{
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.team-overlay{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, .5);
+  visibility: hidden;
+  opacity:0;
+}
+.team-item:hover .team-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+.team-overlay a {
+  display: block;
+  width: 40px;
+  height:40px;
+  background-color: rgb(53, 118, 138);
+  color:white;
+  margin-left: auto;
+}
+.team-overlay a i{
+  line-height: 40px;
+}
+.team-info-title{
+  color:rgb(22, 19, 19);
+  padding:10px 0;
+}
+.h2-title{
+  text-align: center;
+  font-size: 30px;
+}
+.team-info-text{
+  color:gray;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.team-item.mg{
+  margin: 0   7%;
+}
+.team-img img{
+  width: 100%;
+}
+.team-item:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top:0;
+  left: 0;
+  background-color: gray;
+  opacity: 0;
+}
+.team-item:hover:after{
+  width: 100%;
+  height: 100%;
+  opacity:.4;
+  transition: 1s;
+}
+.team-item:hover .team-info-title{
+  color:white;
+  transition:  .5s;
+}
+.team-item:hover .team-info-text{
+  color: blue;
+  transition: 1s;
+}
+/* 10..blog........................................................................................ */
+.blog-content{
+  overflow: hidden;
+  background-color:rgb(202, 199, 199);
+}
+.blog-item{
+  float: left;
+  width: 30%;
+  background-color: white;
+  position: relative;
+}
+.blog-item-img{
+  width: 100%;
+  margin-left: 23px;
+}
+.blog-list{
+  list-style: none;
+  margin: 10px 0;
+}
+.blog-list li{
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 5px;
+}
+.blog-list li  i{
+  color:rgb(52, 165, 180);
+}
+.blog-info{
+  padding: 20px;
+}
+.blog-title{
+  font-size: 30PX;
+  text-align: center;
+  padding-top: 130px;
+}
+.blog-h3{
+  font-weight: bold;
+  margin: 20px 0;
+  margin-bottom: 25px;
+}
+.blog-p{
+  color: rgb(165, 158, 158);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.blog-link{
+  font-size: 20px;
+  text-decoration: none; 
+  color: rgb(37, 155, 145);
+}
+.blog-item.mg{
+  margin: 0 5%;
+}
+.blog-item:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0%;
+  bottom: 0;
+  transition: 1s;
+  opacity: 0;
+  background-color: rgb(56, 143, 155);
+}
+.blog-item:hover:after{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+/* 11 footer....................................................................................... */
+.footer{
+  background-color: rgb(212, 199, 199);
+  text-align: center;
+  height: 400px;
+  padding: 100px   10px;
+}
+.footer-links{
+  list-style: none;
+  margin: 20px 0;
+}
+.footer-links li{
+  display: inline-block;
+  background-color: rgb(59, 133, 182);
+  width:50px;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+}
+.footer-links li a{
+  display: block;
+  width:100%;
+  height: 100%;
+  color:rgb(43, 110, 150);
+  color: white;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-right: 15px;
+  font-size: 23px;
+  margin: 0 8px;
+}
+.footer-links li:after{
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: .5s;
+  background-color: rgb(47, 95, 184);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0%;
+  bottom: 0;
+}
+.footer-links li:hover:after{
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50%;
+}
+.footer p{
+  color:gray;
+  font-size: 12px;
+  text-transform: uppercase;
+}
